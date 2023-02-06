@@ -1,38 +1,254 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@800&family=Poppins:wght@300&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1{
+  text-transform: uppercase;
+}
+
+
+/* === NAV STYLES === */
+.navbar {
+  background: transparent;
+  min-height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 50%;
+  color: white;
+  text-decoration: none;
+}
+
+.navLinks a {
+  color: rgba(255,2555,255,0.85);
+  font-weight: bold;
+}
+
+.navLinks a:hover {
+  color: rgba(255,2555,255,1);
+  text-decoration: underline;
+}
+
+/* === SIDE NAVBAR === */
+.dots{
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dots li{
+    display: block;
+    border-radius: 50%;
+    border: 2px solid darkslategray;
+    background-color: rgba(255,2555,255,0.2);
+    width: 15px;
+    height: 15px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.dots a{
+  margin-right: 25px;
+  font-weight: bold;
+  direction: rtl; 
+  text-align: right; 
+  color: transparent;
+}
+
+
+.dots li:hover{
+  background-color: rgba(255,2555,255,0.4);
+  transform: scale(1.2);
+  color: darkslategray;
+}
+
+/* === Landing === */
+.landing {
+  background: url("./img/bg-gradient.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: none;
+}
+
+.headings{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.headings h1{
+  font-family: 'Muli', sans-serif;
+  text-transform: capitalize;
+  font-size: 4rem;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.headings h2{
+  font-family: 'Muli', sans-serif;
+  font-size: 1.5rem;
   color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.landing-buttons{
+  display: block;
+  text-align: center;
+  padding-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* FROM https://uiverse.io/sekaiking/tidy-starfish-71 */
+button {
+  background-color: white;
+  color: black;
+  border-radius: 10em;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 1em 2em;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 black;
+}
+
+button:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+}
+
+button:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+}
+
+
+/* === ABOUT === */
+.about{
+  background-color: white;
+  height: 100vh;
+  padding: 60px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.projects{
+  background-color: lightsalmon;
+  height: 100vh;
+  padding: 60px;
+}
+
+.contact{
+  background-color: lightgoldenrodyellow;
+  height: 100vh;
+  padding: 60px;
+}
+
+
+
+/* === RESPONSIVE SCREEN STYLES === */
+/* IPAD */
+@media only screen and (max-width : 1200px){
+  #scroll, .navLinksDots{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navLinks {
+    width: 80%;
+  }
+
+  .row{
+    display: inline;
+  }
+
+  #contact{
+    background-color: green;
+  }
+}
+
+/* IPHONE */
+@media screen and (max-width: 750px){
+
+  #scroll, .navLinksDots{
+    display: none;
+  }
+
+  .navLinks {
+    width: 80%;
+  }
+
+  .row{
+    display: inline;
+  }
+
+  #contact{
+    background-color: blue;
+  }
+}
+
+
+/* === ANIMATIONS === */
+#scroll{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, 0%);
+  animation: fade-in 4s ease forwards;
+}
+
+#scroll circle{
+  animation: circle-anim 1.5s infinite;
+}
+
+@keyframes circle-anim{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(46px)
+  }
+}
+
+@keyframes fade-in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }
