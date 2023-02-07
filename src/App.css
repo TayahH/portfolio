@@ -15,10 +15,11 @@ a {
   text-decoration: none;
 }
 
-h1{
-  text-transform: uppercase;
+h2{
+  font-family: 'Muli', sans-serif;
+  font-size: 3rem;
+  color: peachpuff;
 }
-
 
 /* === NAV STYLES === */
 .navbar {
@@ -80,11 +81,14 @@ h1{
   color: transparent;
 }
 
-
 .dots li:hover{
-  background-color: rgba(255,2555,255,0.4);
-  transform: scale(1.2);
+  background-color: rgba(255,2555,255,0.8);
+  /* transform: scale(1.2); */
   color: darkslategray;
+}
+
+.dots .active{
+  background-color: darkslategray;
 }
 
 /* === Landing === */
@@ -154,27 +158,51 @@ button:active {
 .about{
   background-color: white;
   height: 100vh;
-  padding: 60px;
 }
+
 
 .row {
   display: flex;
 }
 
-.column {
+.about .column-left {
   flex: 50%;
+  padding: 25vh 60px 30px 60px;
 }
 
-.projects{
-  background-color: lightsalmon;
+.about .column-right {
+  flex: 50%;
   height: 100vh;
-  padding: 60px;
+  background-color: peachpuff;
 }
 
+
+/* === PROJECTS === */
+.projects{
+  background-color: #CBC3E3;
+  height: 100vh;
+  padding: 30px 60px 30px 60px;
+}
+
+.projects h2{
+  text-align: center;
+  color: white;
+}
+
+
+
+
+
+/* === CONTACT === */
 .contact{
   background-color: lightgoldenrodyellow;
   height: 100vh;
-  padding: 60px;
+  display: flex;
+}
+
+
+footer{
+  text-align: center;
 }
 
 
@@ -184,6 +212,10 @@ button:active {
 @media only screen and (max-width : 1200px){
   #scroll, .navLinksDots{
     display: none;
+  }
+
+  .about, .projects, .contact{
+    height: auto;
   }
 
   .navLinks {
@@ -206,6 +238,10 @@ button:active {
     display: none;
   }
 
+  .about, .projects, .contact{
+    height: auto;
+  }
+
   .navLinks {
     width: 80%;
   }
@@ -218,6 +254,8 @@ button:active {
     background-color: blue;
   }
 }
+
+
 
 
 /* === ANIMATIONS === */
@@ -233,6 +271,22 @@ button:active {
 #scroll circle{
   animation: circle-anim 1.5s infinite;
 }
+
+/* .arrow {
+  border-color:transparent;
+  border-style:solid;
+  border-width:0 2em;
+  display:block;
+  height:0;
+  opacity:0.4;
+  text-indent:-9999px;
+  transform-origin: 50% 50%;
+  width:0;
+}
+.up {
+  animation: uparrow 0.6s infinite alternate ease-in-out;
+  border-bottom:2em solid black;
+} */
 
 @keyframes circle-anim{
   0%{
@@ -251,4 +305,9 @@ button:active {
   100%{
     opacity: 1;
   }
+}
+
+@keyframes uparrow {
+  0% { transform: translateY(0); opacity: 0.4 }
+  100% { transform: translateY(-0.4em); opacity: 0.9 }
 }
