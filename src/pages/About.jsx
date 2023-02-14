@@ -24,14 +24,17 @@ export default function Contact() {
                 .start();
                 }}/>
                 </h2>
+            <br/>
+            
+            <div className="paragraph">
+              <p>Hello, I’m Tayah, a Front End Developer, UX/UI Designer and Creative Coder with 4+ years of web design and development education. I have recently graduated with Distinctions from the Queensland University of Technology with a Bachelors of Information Technology (Computer Science) and a Bachelors of Design (Interaction Design) and am looking to kickstart my career as a <b>‘Junior Front End Developer’.</b></p>
 
-            <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis arcu ac nisl porta, sit amet dignissim turpis tincidunt. Sed eu fringilla erat. Aenean ullamcorper, tellus eget dignissim pulvinar, felis augue maximus sem, at euismod sem dolor sit amet turpis. Ut fringilla ac magna id scelerisque. Donec sit amet metus risus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis suscipit dui dui, et imperdiet mi malesuada et. Cras at sapien semper, venenatis purus a, porttitor magna. Nam tristique lorem nec quam interdum, vel facilisis risus tempus. Pellentesque non nibh enim. Proin luctus ornare mollis. Aenean lacus magna, ornare eu rutrum non, consequat lacinia mi. Duis sollicitudin euismod felis sed tincidunt.
-                Vivamus gravida purus pharetra, sagittis leo vel, tristique mi. Aliquam vulputate ligula in gravida tempus. Pellentesque rhoncus felis a erat malesuada, sit amet placerat augue mollis. Fusce facilisis mauris quis rutrum cursus. Sed tincidunt dictum ligula, vitae fermentum sapien pulvinar in. Duis vitae mauris elit. Etiam pharetra nibh sed consequat cursus.</a>
+              <p>As a developer with a passion for design I enjoy challenging myself with staying up to date with current web design trends that can influence the way I design and code. I am entirely user focused when it comes to my work and believe over all else a well built user experience is key to the success of any modern digital platform. I have excellent at time management and organization skills and enjoy problem solving everyday challenges to find modern innovative solutions.</p>
+
+              <p>My core values and skills stem from the numerous opportunities and industry experiences I have partaken in, all of which shaped me to become the developer and designer I am today. In particular, over the last year I had the opportunity to, work with the Brisbane City Council on a UX/UI proposal, intern with a high-end web development team as a junior designer, travel internationally to be a part of Austrias ‘ARS Electronica’ design, technology and society festival, and showcase my interactive game experience at QUT’s graduate design festival.</p>
+            </div>
             </div>
             <div className="column-right">
-              {/* <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#CBC3E3" d="M48.5,-67.1C59.1,-59.2,61.1,-39.8,66.2,-22C71.3,-4.2,79.5,12.2,78.3,28.3C77,44.5,66.3,60.5,51.7,64.9C37,69.3,18.5,62.1,1,60.8C-16.6,59.4,-33.1,63.9,-46.3,59C-59.5,54.2,-69.4,40,-71.7,25.1C-74.1,10.2,-69,-5.3,-64.2,-21.1C-59.4,-37,-54.9,-53.2,-44.3,-61.1C-33.6,-69,-16.8,-68.6,1.1,-70.1C19,-71.6,38,-75,48.5,-67.1Z" transform="translate(100 100)"/>
-              </svg> */}
             </div>
         </div>
         

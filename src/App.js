@@ -1,7 +1,6 @@
 // Modules
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashLink as Link } from "react-router-hash-link";
 import { useInView } from 'react-intersection-observer';
 

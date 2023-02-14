@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Muli:wght@800&family=Poppins:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
   margin: 0;
@@ -15,6 +14,11 @@ a {
   text-decoration: none;
 }
 
+p{
+  text-decoration: none;
+  font-size: 16px;
+}
+
 h2{
   font-family: 'Muli', sans-serif;
   font-size: 3rem;
@@ -24,7 +28,8 @@ h2{
 /* === NAV STYLES === */
 .navbar {
   background: transparent;
-  min-height: 8vh;
+  height: 8vh;
+  min-height: 40px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -65,8 +70,8 @@ h2{
 .dots li{
     display: block;
     border-radius: 50%;
-    border: 2px solid darkslategray;
-    background-color: rgba(255,2555,255,0.2);
+    border: 2px solid black;
+    background-color: rgba(255,255,255,1);
     width: 15px;
     height: 15px;
     margin: 10px 0;
@@ -82,19 +87,20 @@ h2{
 }
 
 .dots li:hover{
-  background-color: rgba(255,2555,255,0.8);
+  background-color: darkslategray;
   /* transform: scale(1.2); */
-  color: darkslategray;
+  color: black;
 }
 
 .dots .active{
-  background-color: darkslategray;
+  background-color: black;
 }
 
 /* === Landing === */
 .landing {
   background: url("./img/bg-gradient.jpg");
   height: 100vh;
+  min-height: 300px;
   background-size: cover;
   background-repeat: none;
 }
@@ -158,8 +164,8 @@ button:active {
 .about{
   background-color: white;
   height: 100vh;
+  min-height: 800px;
 }
-
 
 .row {
   display: flex;
@@ -167,42 +173,102 @@ button:active {
 
 .about .column-left {
   flex: 50%;
-  padding: 25vh 60px 30px 60px;
+  padding: 15vh 60px 30px 60px;
 }
 
 .about .column-right {
   flex: 50%;
   height: 100vh;
+  min-height: 800px;
   background-color: peachpuff;
 }
 
+.paragraph{
+  text-align: justify;
+}
+
+.paragraph p{
+  line-height: 25px;   /* within paragraph */
+  margin-bottom: 25px; /* between paragraphs */
+  font-family: 'Roboto', sans-serif;
+}
 
 /* === PROJECTS === */
 .projects{
-  background-color: #CBC3E3;
+  background-color: white;
   height: 100vh;
   padding: 30px 60px 30px 60px;
 }
 
 .projects h2{
   text-align: center;
-  color: white;
+  color: peachpuff  ;
 }
 
+#gallery {
+  padding-right: 60px;
+  padding-left: 60px;
+  padding-top: 30px;
+  line-height:0;
+  column-count:3;
+  column-gap:10px;
 
+}
 
+#gallery img {
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom:5px; /* to match column gap */
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+#gallery img:hover {
+  filter:none;
+}
 
 
 /* === CONTACT === */
 .contact{
-  background-color: lightgoldenrodyellow;
-  height: 100vh;
   display: flex;
+  height: 80vh;
 }
 
+.contact h2{
+  text-align: center;
+  padding-top: 20px;
+  color: black;
+}
+
+.contact h3{
+  text-align: center;
+  color: black;
+}
 
 footer{
   text-align: center;
+  background-color: #ffdab9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+
+footer div{
+  padding-top: 30px;
+}
+
+footer div a{
+  color: black;
+}
+
+#scroll-up{
+  fill: #354264;
+  width: 30px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  animation: pulse 2s infinite;
+  transform: translate(-50%, 0);
 }
 
 
@@ -229,6 +295,20 @@ footer{
   #contact{
     background-color: green;
   }
+
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  #gallery {
+    column-count: 2;
+   }
+  
+   #gallery img {
+    filter: none;
+  }
 }
 
 /* IPHONE */
@@ -237,9 +317,13 @@ footer{
   #scroll, .navLinksDots{
     display: none;
   }
-
+  
   .about, .projects, .contact{
     height: auto;
+  }
+
+  .landing{
+    min-height: 100px;
   }
 
   .navLinks {
@@ -253,9 +337,31 @@ footer{
   #contact{
     background-color: blue;
   }
+
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  #gallery {
+    column-count: 1;
+   }
+
+   #gallery img {
+    filter:none;
+  }
 }
 
+@media only screen and (max-height : 400px){
+  #scroll, .navLinksDots{
+    display: none;
+  }
 
+  .about .column-right {
+    height: 800px;
+  }
+}
 
 
 /* === ANIMATIONS === */
@@ -271,22 +377,6 @@ footer{
 #scroll circle{
   animation: circle-anim 1.5s infinite;
 }
-
-/* .arrow {
-  border-color:transparent;
-  border-style:solid;
-  border-width:0 2em;
-  display:block;
-  height:0;
-  opacity:0.4;
-  text-indent:-9999px;
-  transform-origin: 50% 50%;
-  width:0;
-}
-.up {
-  animation: uparrow 0.6s infinite alternate ease-in-out;
-  border-bottom:2em solid black;
-} */
 
 @keyframes circle-anim{
   0%{
@@ -307,7 +397,14 @@ footer{
   }
 }
 
-@keyframes uparrow {
-  0% { transform: translateY(0); opacity: 0.4 }
-  100% { transform: translateY(-0.4em); opacity: 0.9 }
+@keyframes pulse{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }

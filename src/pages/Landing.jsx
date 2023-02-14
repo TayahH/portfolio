@@ -11,7 +11,7 @@ export default function Landing() {
           <h2>Front End Developer, UI Designer and Creative Coder</h2>
           <div className="landing-buttons">
             <button>Resume</button>
-            <Link to="#contact"><button>Contact</button></Link>
+            <Link to="#contact"><button>Contact Me</button></Link>
           </div>
         </div> 
         
