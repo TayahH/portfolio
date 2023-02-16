@@ -16,7 +16,6 @@ import Contact from "./pages/Contact";
 // Components
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
-// import SideNavBar from "./components/SideNavBar";
 
 
 function App() {
@@ -54,23 +53,14 @@ function App() {
 
   return (
     <div>
-      {/* <h1 className="blah">{`Home ${inView}.`}</h1>
-      <br></br>
-      <h1 className="blah">{`About ${inView1}.`}</h1>
-      <br></br>
-      <h1 className="blah">{`Projects ${inView2}.`}</h1>
-      <br></br>
-      <h1 className="blah">{`Contact ${inView3}.`}</h1> */}
-
       <BrowserRouter>
-          {/* <SideNavBar /> */}
           <nav>
             <div className="navLinksDots">
                 <ul className = "dots">
-                    <Link to="#landing"><li className= {inView ? "active" : ""} ><a>Home</a></li></Link>
-                    <Link to="#about"><li className= {inView1 ? "active" : ""}><a>About</a></li></Link>
-                    <Link to="#projects"><li className= {inView2 ? "active" : ""}><a>Projects</a></li></Link>
-                    <Link to="#contact"><li className= {inView3 ? "active" : ""}><a>Contact</a></li></Link>
+                    <Link smooth to="#landing"><li className= {inView ? "active" : ""} ><a>Home</a></li></Link>
+                    <Link smooth to="#about"><li className= {inView1 ? "active" : ""}><a>About</a></li></Link>
+                    <Link smooth to="#projects"><li className= {inView2 ? "active" : ""}><a>Projects</a></li></Link>
+                    <Link smooth to="#contact"><li className= {inView3 ? "active" : ""}><a>Contact</a></li></Link>
                 </ul>
             </div>
         </nav>

@@ -171,20 +171,46 @@ button:active {
   display: flex;
 }
 
+.container{
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
+
 .about .column-left {
-  flex: 50%;
-  padding: 15vh 60px 30px 60px;
+  flex: 100%;
+  padding: 15vh 60px 15vh 60px;
 }
 
 .about .column-right {
-  flex: 50%;
+  flex: auto;
   height: 100vh;
   min-height: 800px;
+  padding: 22vh 100px 15vh 60px;
   background-color: peachpuff;
+}
+
+.profile-bg {
+  width: 420px;
+  height: 550px;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 0;
+  box-shadow: 15px 15px 0 -2.5px #fff, 15px 15px 0 0 #000;
+  margin-left: 5vw;
+  margin-top: 9vw;
+}
+
+.about img{
+  max-width: 415px;
+  max-height: 545px;
+  width: auto;
+  height: auto;
 }
 
 .paragraph{
   text-align: justify;
+  max-width: 1600px;
 }
 
 .paragraph p{
@@ -196,6 +222,7 @@ button:active {
 /* === PROJECTS === */
 .projects{
   background-color: white;
+  min-height: 800px;
   height: 100vh;
   padding: 30px 60px 30px 60px;
 }
@@ -206,18 +233,19 @@ button:active {
 }
 
 #gallery {
-  padding-right: 60px;
-  padding-left: 60px;
+  padding-right: 5%;
+  padding-left: 5%;
   padding-top: 30px;
+  max-width: 1700px;
   line-height:0;
   column-count:3;
   column-gap:10px;
-
+  margin: 10px auto;
 }
 
 #gallery img {
-  width: 100% !important;
-  height: auto !important;
+  width: 100%;
+  height: auto;
   margin-bottom:5px; /* to match column gap */
   filter: grayscale(100%);
   cursor: pointer;
@@ -230,20 +258,35 @@ button:active {
 
 /* === CONTACT === */
 .contact{
-  display: flex;
-  height: 80vh;
+  background-color: peachpuff;
+  min-height: 200px;
+  height: 60vh;
+  padding: 30px 60px 30px 60px;
 }
 
 .contact h2{
   text-align: center;
-  padding-top: 20px;
-  color: black;
+  padding-top: 20vh;
+  color: white;
 }
 
 .contact h3{
   text-align: center;
-  color: black;
+  color: white;
 }
+
+.contact-buttons{
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.contact button a{
+  color: black;
+  text-decoration: none;
+}
+
+/* === FOOTER ==== */
 
 footer{
   text-align: center;
@@ -251,6 +294,7 @@ footer{
   padding-top: 10px;
   padding-bottom: 10px;
   text-decoration: none;
+  height: 10vh;
 }
 
 footer div{
@@ -275,26 +319,23 @@ footer div a{
 
 /* === RESPONSIVE SCREEN STYLES === */
 /* IPAD */
-@media only screen and (max-width : 1200px){
+@media only screen and (max-width : 1399px){
   #scroll, .navLinksDots{
     display: none;
   }
 
   .about, .projects, .contact{
     height: auto;
+    min-height: 300px;
   }
 
   .navLinks {
     width: 80%;
   }
 
-  .row{
+  /* .row{
     display: inline;
-  }
-
-  #contact{
-    background-color: green;
-  }
+  } */
 
   .column {
     width: 100%;
@@ -302,17 +343,39 @@ footer div a{
     margin-bottom: 20px;
   }
 
+  .about .column-left {
+    flex: 100%;
+    padding: 5vh 60px 5vh 60px;
+  }
+
+  .about .column-right{
+    display: none;
+  }
+
   #gallery {
     column-count: 2;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 30px;
    }
   
    #gallery img {
     filter: none;
   }
+
+  .contact h2{
+    padding-top: 5vh;
+  }
+
+  .paragraph{
+    max-width: 100%;
+  }
+
+
 }
 
 /* IPHONE */
-@media screen and (max-width: 750px){
+@media screen and (max-width: 767px){
 
   #scroll, .navLinksDots{
     display: none;
@@ -320,6 +383,7 @@ footer div a{
   
   .about, .projects, .contact{
     height: auto;
+    min-height: 600px;
   }
 
   .landing{
@@ -334,10 +398,6 @@ footer div a{
     display: inline;
   }
 
-  #contact{
-    background-color: blue;
-  }
-
   .column {
     width: 100%;
     display: block;
@@ -346,12 +406,42 @@ footer div a{
 
   #gallery {
     column-count: 1;
+    padding-right: 0px;
+    padding-left: 0px;
    }
 
    #gallery img {
     filter:none;
   }
+
+  .contact{
+    height: 90vh;
+  }
+
+  .contact h2{
+    padding-top: 20vh;
+  }
+
+  .column-right{
+    display: none;
+  }
+
+  .paragraph{
+    max-width: 100%;
+  }
 }
+
+
+/* DESKTOP */
+@media only screen and (min-width : 1700px){
+
+  /* .about .column-left{
+    flex: 100%;
+  } */
+}
+
+
+
 
 @media only screen and (max-height : 400px){
   #scroll, .navLinksDots{
