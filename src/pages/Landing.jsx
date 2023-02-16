@@ -10,7 +10,7 @@ export default function Landing() {
           <h1>Tayah Hoekwater</h1>
           <h2>Front End Developer, UI Designer and Creative Coder</h2>
           <div className="landing-buttons">
-            <button target="_blank">Resume</button>
+            <a href="https://drive.google.com/file/d/16UDkfNPukAPYDwgTKErHs0dzX1gF6v2R/view" target="_blank"><button>Resume</button></a>
             <Link to="#contact"><button>Contact Me</button></Link>
           </div>
         </div> 
