@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.1dc2e283.css",
-    "main.js": "/portfolio/static/js/main.3237ffb4.js",
-    "static/media/qshuttle.jpg": "/portfolio/static/media/qshuttle.a1e731c4c9f238f4efc4.jpg",
-    "static/media/sel.jpg": "/portfolio/static/media/sel.95faf0abc79673f3cad0.jpg",
+    "main.css": "/portfolio/static/css/main.ac54a047.css",
+    "main.js": "/portfolio/static/js/main.a8c9d640.js",
+    "static/media/TayahHoekwaterPortrait.png": "/portfolio/static/media/TayahHoekwaterPortrait.30204cf40f6317757050.png",
+    "static/media/Lunar-Exchange.jpg": "/portfolio/static/media/Lunar-Exchange.47c0dcd014161f82c95a.jpg",
+    "static/media/Fitness-Mirror.jpg": "/portfolio/static/media/Fitness-Mirror.cbc6c133f9d42e157456.jpg",
+    "static/media/Signs-Of-Life.jpg": "/portfolio/static/media/Signs-Of-Life.5ed7fbf04bc925ec3486.jpg",
+    "static/media/Postal-Plants.jpg": "/portfolio/static/media/Postal-Plants.2eb983be1aea8149ac1b.jpg",
+    "static/media/QShuttle.jpg": "/portfolio/static/media/QShuttle.8d21ff863e7b39ee5aac.jpg",
     "static/media/bg-gradient.jpg": "/portfolio/static/media/bg-gradient.f4ce61bd5272919ad523.jpg",
+    "static/media/South-East-Local.jpg": "/portfolio/static/media/South-East-Local.1fe416de07251e89726d.jpg",
     "index.html": "/portfolio/index.html",
-    "main.1dc2e283.css.map": "/portfolio/static/css/main.1dc2e283.css.map",
-    "main.3237ffb4.js.map": "/portfolio/static/js/main.3237ffb4.js.map"
+    "main.ac54a047.css.map": "/portfolio/static/css/main.ac54a047.css.map",
+    "main.a8c9d640.js.map": "/portfolio/static/js/main.a8c9d640.js.map"
   },
   "entrypoints": [
-    "static/css/main.1dc2e283.css",
-    "static/js/main.3237ffb4.js"
+    "static/css/main.ac54a047.css",
+    "static/js/main.a8c9d640.js"
   ]
 }
